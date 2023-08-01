@@ -29,6 +29,7 @@ WiFiClient live_client;
 
 String index_html = "<meta charset=\"utf-8\"/>\n" \
                     "<style>\n" \
+
                     "#content {\n" \
                     "display: flex;\n" \
                     "flex-direction: column;\n" \
@@ -36,8 +37,21 @@ String index_html = "<meta charset=\"utf-8\"/>\n" \
                     "align-items: center;\n" \
                     "text-align: center;\n" \
                     "min-height: 100vh;}\n" \
+                    ".container {\n"
+                    "margin-top: 50px;\n"
+                    "height: 100;\n"
+                    "position: relative; }\n"
+
+                    ".center {\n"
+                    "margin: 0;\n"
+                    "position: absolute;\n"
+                    "top: 50 %;\n"
+                    "left: 50 %;\n"
+                    "-ms - transform: translate(-50 %, -50 % );\n"
+                    "transform: translate(-50 %, -50 % );}\n"
+
                     "</style>\n" \
-                    "<body bgcolor=\"#000000\"><div id=\"content\"><h2 style=\"color:#ffffff\">CCTV rumah BTN 99 No.15</h2><img src=\"video\"></div><button>FOTO</button><button>KIRI</button><button>KANAN</button></body>";
+                    "<body bgcolor=\"#000000\"><div id=\"content\"><h2 style=\"color:#ffffff\">CCTV rumah BTN 99 No.15</h2><img src=\"video\"><div class=\"container\"><div class=\"center\"></div><button>Foto</button><button>Kiri</button><button>Kanan</button></div></div></body>";
 
 void configCamera(){
   camera_config_t config;
